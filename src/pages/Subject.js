@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import axios from "axios";
 import DataTable from "react-data-table-component";
 import { CrudApp } from '../components/CrudApp';
+import { NavBar } from '../components/NavBar';
 
 {/*
 const columns = [
@@ -33,9 +34,11 @@ export const Subject = () => {
       return (
         
         <div className='App'>
-          <div>
-          <CrudApp url={url} namePage={namePage}></CrudApp>
-          </div>
+          <>
+            <NavBar></NavBar>
+             <CrudApp url={url} namePage={namePage}></CrudApp>
+          
+          </>
         </div>
       );
 }
